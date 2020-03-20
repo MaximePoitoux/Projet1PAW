@@ -13,30 +13,74 @@
 <header>
   <div class="header-img">
     <h1 class="word">
-        <span class="char">P A W</span>
-    <br>
-        <span class="desc">Pastries Around the World</span>
-  </h1>
+      <span class="char">P A W</span>
+      <br>
+      <span class="desc">Pastries Around the World</span>
+    </h1>
   </div>
 
 
-<div class="header-nav">
-  <div class="logo">
-    <a href="index.html"><img class="logo" src="img/logodefdef.png" alt="logo" width="140px" height="140px"></a>
+  <div class="header-nav">
+    <div class="logo">
+      <a href="index.html"><img class="logo" src="img/logodefdef.png" alt="logo" width="140px" height="140px"></a>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html" class="active" title="Accueil">Home</a>
+      <a href="concept.html" title="Presentation">Presentation</a>
+      <a href="gallery.html" title="Gallery">Gallery</a>
+      <a href="contact.html" title="Contact">Contact</a>
+
+      <!-- Button Dark Mode -->
+      <button class='dark_mode' onclick="myFunction()">Dark Mode</button>
+      <!-- End Button Dark Mode -->
+
+      <!-- Button Bottom Modal -->
+      <button id="myBtn">Welcome</button>
+      <!-- End Button Bottom Modal -->
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Welcome to my website ! My name is Maxime</h2>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="open-btn">
+        <button class="open-button" onclick="openForm()">
+        <strong>Log In</strong>
+        </button>
+      </div>
+
+      <div id="loginPopup">
+        <div class="form-popup" id="popupForm">
+          <form action="/action_page.php" class="form-container">
+            <h2>Please Log in</h2>
+            <label for="email">
+            <strong>E-mail</strong>
+            </label>
+            <input type="text" id="email" placeholder="Your Email" name="email" required>
+            <label for="psw">
+            <strong>Password</strong>
+            </label>
+            <input type="password" id="psw" placeholder="Your Password" name="psw" required>
+            <button type="submit" class="btn">Log in</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
+        </div>
+      </div>
+
+    </nav>
+
   </div>
-
-  <nav class="nav">
-    <a href="index.html" class="active" title="Accueil">Home</a>
-    <a href="concept.html" title="Presentation">Presentation</a>
-    <a href="gallery.html" title="Gallery">Gallery</a>
-    <a href="contact.html" title="Contact">Contact</a>
-  </nav>
-</div>
-
 </header>
 
-
 <body>
+
   <!-- Start Nav-bar -->
   <div class="navbar">
     <a href="index.html" class="active"><i class="fas fa-home"></i></a>
@@ -45,6 +89,10 @@
     <a href="contact.html"><i class="fas fa-at"></i></a>
   </div>
   <!-- End Nav-bar -->
+
+
+
+
   <!-- START CARDS -->
   <div class="container1">
 
@@ -123,6 +171,13 @@
       </div>
     </div>
   </footer>
+
+
+
+
+
+  <script src="script.js"></script>
+  <script src="bottom_modal.js"></script>
 </body>
 
 </html>
